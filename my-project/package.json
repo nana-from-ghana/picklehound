@@ -1,0 +1,14 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "\"testing gulp\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

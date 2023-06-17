@@ -2,14 +2,16 @@
   "name": "picklehound",
   "version": "0.0.1",
   "description": "This is a website for each city/town",
-  "main": "index.html",
+  "source": ["index.js", "index.html"],
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
-    "imagemin": "imagemin img/* -o dist/img","lite": "lite-server",
+    "imagemin": "imagemin img/* -o dist/img",
+    "lite": "lite-server",
     "start": "npm run lite",
-    "test": "echo \"Erroe: no test specified \" && exit 1",
+    "test": "echo \"Error: no test specified \" && exit 1",
+    "uglifyjs": "./node_modules/.bin/uglify_es_script",
     "usemin": "usemin events.html -d dist --htmlmin -o dist/events.html && usemin index.html -d dist --htmlmin -o dist/index.html ",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
@@ -17,21 +19,29 @@
   "author": "Nana Kwakwa",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.2.0",
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.7.0",
     "popper": "^1.0.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "uglify-js-es6": "^2.8.9"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.2",
     "imagemin-cli": "^7.0.0",
     "lite-server": "^2.6.1",
     "node-sass": "^9.0.0",
     "onchange": "^7.1.0",
     "parallelshell": "^3.0.2",
+    "parcel": "^2.9.2",
     "rimraf": "^5.0.1",
+    "uglify-es": "^3.3.9",
+    "usemin": "^0.6.0",
     "usemin-cli": "^0.6.0"
   }
 }
