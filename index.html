@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    
+    <!-- Additional CSS must be placed after Bootstrap CSS --->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Picklehound</title>
+</head>
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-sm bg-light shadow p-3 mb-5 bg-body rounded">
+        <div class="container-fluid">
+            <div class="align-self-center">
+                <a class="navbar-brand" href="#"><img src="img/picklehound1.svg" class="logo" alt="Picklehound Logo" height="60" width="60"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link navbar-active active" aria-current="page" href="#">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3 mx-auto container-flex">
+        <div>
+            <h4>In the Pickle Jar Today</h4>
+        </div>
+        <div class="d-flex align-items-center sep">
+            <div class="flex-shrink-0">
+                <img class="deal-pic d-none d-sm-block" src="img/pisa_pizza_bogo.jpg" alt="Pisa Pizza">
+            </div>
+            <div class="col-3 d-sm-none d-block">
+                <h5>Pisa Pizza</h5>
+            </div>
+            <div class="flex-grow-1 ms-3 pic-desc">
+                <h5 class="d-none d-sm-block">Pisa Pizza</h5>
+                Buy Any Large Pizza - Get 1 Large Cheese Pizza Free
+            </div>
+            <div class="col-sm-1">
+                <a role="button" class="pull-right btn btn-link order-sm-last fa-2x" href="tel:+1(781)397-7777"><i class="fa fa-phone"></i></a>
+            </div>
+        </div>
+        <div class="d-flex align-items-center sep">
+            <div class="flex-shrink-0">
+                <img class="deal-pic d-none d-sm-block" src="img/santa_fe.png" alt="Santa Fe Bar & Grill">
+            </div>
+            <div class="col-3 d-sm-none d-block">
+                <h5>Santa Fe Bar &amp; Grill</h5>
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <h5 class="d-none d-sm-block">Santa Fe Bar &amp; Grill</h5>
+                10% Off First online Order <br /> $5 Off Every $100 Spent Online
+            </div>
+            <div class="col-sm-1">
+                <a role="button" class="pull-right btn btn-link order-sm-last fa-2x" href="tel:+1(781)605-1352"><i class="fa fa-phone"></i></a>
+            </div>
+        </div>
+        <div class="d-flex align-items-center sep">
+            <div class="flex-shrink-0">
+                <img class="deal-pic d-none d-sm-block" src="img/billiards.jpg" alt="Amazin Billiards">
+            </div>
+            <div class="col-3 d-sm-none d-block">
+                <h5 >Amazin Billiards</h5>
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <h5 class="d-none d-sm-block">Amazin Billiards</h5>
+                Free Practice: 6pm - 6:40pm
+            </div>
+            <div class="col-sm-1">
+                <a role="button" class="pull-right btn btn-link order-sm-last fa-2x" href="tel:+1(781)605-2389"><i class="fa fa-phone"></i></a>
+            </div>
+        </div>
+        <div class="d-flex align-items-center sep">
+            <div class="flex-shrink-0">
+                <img class="deal-pic d-none d-sm-block" src="img/110_grill.jpg" alt="110 Grill">
+            </div>
+            <div class="col-3 d-sm-none d-block">
+                <h5>110 Grill</h5>
+            </div>
+            <div class="flex-grow-1 ms-3">
+                <h5 class="d-none d-sm-block">110 Grill</h5>
+                FREE kids meal with the purchase of adult entrée
+            </div>
+            <div class="col-sm-1">
+                <a role="button" class="pull-right btn btn-link order-sm-last fa-2x" href="tel:+1(781)605-2172"><i class="fa fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+   
+    <div id="dealModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Add a Deal</h3>
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Location</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="location" placeholder="Enter location">
+                                </div>                              
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Deal</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="dealText" id="dealText" value="" checked>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                <div class="col-sm-6">
+                                    <input type="date" class="form-control" name="date" id="date" placeholder="mm/dd/yyyy"/>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <input class="btn btn-secondary" type="submit" value="Cancel" data-dismiss="modal" />
+                                    <input class="btn btn-primary" type="submit" value="Submit" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <footer class="site-footer py-3 my-4 bg-light">
+        <div class="row container">
+            <div class="col-6 col-md-2 mb-3"></div>
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2023 Picklehound, Inc</span>
+            </div>
+            <div class="col-md-4 ">
+                <h5>Contact Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a id="dealButton" class="nav-link p-0 text-muted" role="button">Add More Deals to the Pickle Jar?</a></li>
+                </ul>
+            </div>
+        </div>    
+            
+    </footer>
+
+</body>
+
+</html>
