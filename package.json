@@ -2,9 +2,10 @@
   "name": "picklehound",
   "version": "0.0.1",
   "description": "This is a website for each city/town",
-  "source": ["index.js", "index.html"],
+  "source": "js/scripts.js",
   "scripts": {
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "dev": "parcel index.html",
+    "build": "npm run clean && parcel build index.html --public-url ./",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",

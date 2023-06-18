@@ -1,9 +1,28 @@
-html, body {
-    font-family:
+body {
+    background-color: #FAFAFA;
 }
+
 
 .logo {
     border-radius: 15%;
+}
+
+a { 
+    color: inherit; 
+} 
+
+a:hover {
+    color:rgb(127, 194, 130);
+}
+
+.header-text{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(127, 194, 130);
+    justify-content: center;
+}
+
+.header-title {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
 }
 
 .deal-pic{
