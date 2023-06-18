@@ -11,10 +11,4 @@ $(function() {
         $('#eventModal').modal('show');
     });
 
-    // -------- Resizing Response Code ---------
-    $( window ).on( "resize", function() {
-        if ($( window ).width() < 576 ) {
-            $(".deal-pic").css({'max:width':''});
-        }
-    });
 });

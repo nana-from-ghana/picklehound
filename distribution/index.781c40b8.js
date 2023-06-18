@@ -1,1 +1,0 @@
-$(function(){let o=document.querySelectorAll('[data-bs-toggle="popover"]');[...o].map(o=>new bootstrap.Popover(o)),$("#dealButton").click(function(){$("#dealModal").modal("show")}),$("#eventButton").click(function(){$("#eventModal").modal("show")}),$(window).on("resize",function(){576>$(window).width()&&$(".deal-pic").css({"max:width":""})})});
